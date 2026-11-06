@@ -1,0 +1,13 @@
+# What the scripts make when you run them inside this folder: never commit keys or certificates
+*.key
+*.pem
+*.csr
+*.srl
+*.tsq
+*.tsr
+*.p7s
+index.txt*
+serial*
+tsaserial*
+newcerts/
+.DS_Store
