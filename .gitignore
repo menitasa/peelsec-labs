@@ -11,3 +11,4 @@ serial*
 tsaserial*
 newcerts/
 .DS_Store
+my-ca/

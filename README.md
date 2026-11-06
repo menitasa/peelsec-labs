@@ -8,10 +8,11 @@ PeelSec peels security one layer at a time: short explainers by Meni Tasa, one i
 
 | Folder | Video | What you get |
 |---|---|---|
+| [`e12-private-ca`](e12-private-ca/) | Create your own certificate authority with OpenSSL | a small CA, a server and a client certificate, and local TLS and mTLS test servers |
 | [`e28-csr-explained`](e28-csr-explained/) | CSR explained: what a certificate request proves | a small test CA, its settings, and the keys and request for the last demo |
 | [`e30-code-signing`](e30-code-signing/) | How code signing works: sign your own script | a test CA, a test timestamp authority, and three test certificates |
 
-Both videos are in the playlist [Certificates with OpenSSL](https://www.youtube.com/playlist?list=PLLS8NgEPSNY0).
+All three videos are in the playlist [Certificates with OpenSSL](https://www.youtube.com/playlist?list=PLLS8NgEPSNY0).
 
 ## Before you run anything
 

@@ -1,0 +1,56 @@
+[ ca ]
+default_ca       = CA_default
+
+[ CA_default ]
+dir              = .
+certs            = $dir/certs
+new_certs_dir    = $dir/newcerts
+database         = $dir/index.txt
+serial           = $dir/serial
+crlnumber        = $dir/crlnumber
+certificate      = $dir/certs/ca.cert.pem
+private_key      = $dir/private/ca.key.pem
+default_md       = sha256
+default_days     = 365
+default_crl_days = 30
+crl_extensions   = crl_ext
+policy           = policy_loose
+unique_subject   = no
+copy_extensions  = copy
+
+[ policy_loose ]
+commonName       = supplied
+organizationName = optional
+emailAddress     = optional
+
+[ req ]
+distinguished_name = req_dn
+prompt           = no
+
+[ req_dn ]
+O  = PeelSec Lab
+CN = PeelSec Lab Root CA
+
+[ v3_ca ]
+basicConstraints       = critical, CA:true, pathlen:0
+keyUsage               = critical, keyCertSign, cRLSign
+subjectKeyIdentifier   = hash
+authorityKeyIdentifier = keyid:always
+nameConstraints        = critical, permitted;DNS:localhost, permitted;email:example.com
+
+[ server_cert ]
+basicConstraints       = critical, CA:false
+keyUsage               = critical, digitalSignature
+extendedKeyUsage       = serverAuth
+subjectKeyIdentifier   = hash
+authorityKeyIdentifier = keyid
+
+[ client_cert ]
+basicConstraints       = critical, CA:false
+keyUsage               = critical, digitalSignature
+extendedKeyUsage       = clientAuth
+subjectKeyIdentifier   = hash
+authorityKeyIdentifier = keyid
+
+[ crl_ext ]
+authorityKeyIdentifier = keyid:always
