@@ -1,0 +1,25 @@
+{
+  "name": "peelsec-saml-lab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "PeelSec SAML lab: Example Corp (identity provider) and Expenses (service provider) on your own computer, for learning only.",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node src/lab.ts",
+    "dev": "node --watch src/lab.ts",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@hono/node-server": "2.1.5",
+    "@xmldom/xmldom": "0.9.12",
+    "hono": "4.13.13",
+    "xml-crypto": "6.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "typescript": "7.0.2"
+  }
+}
